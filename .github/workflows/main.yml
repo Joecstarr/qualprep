@@ -20,6 +20,14 @@ jobs:
             root_file: "*.tex"
             glob_root_file: true
 
+        - name: Compile LaTeX document
+          uses: xu-cheng/latex-action@v2
+          with:
+            working_directory: "prepsheets/analysis"
+            latexmk_use_lualatex: true
+            root_file: "*.tex"
+            glob_root_file: true
+
         - name: Bump version and push tag
           id: tag_version
           uses: mathieudutour/github-tag-action@v6.0
@@ -38,6 +46,7 @@ jobs:
           with:
             tag_name: ${{ steps.tag_version.outputs.new_tag }}
             files: |
-              *.pdf
-              *.tex
+              **/*.pdf
+              **/*.tex
+              **/*.apkg
 

@@ -16,16 +16,16 @@
 
 \usepackage{../draculatheme}
 \mdfdefinestyle{darkAnswer}{%
-  fontcolor=draculafg,
-  backgroundcolor=draculabg,
-  linecolor=draculafg,
-  }
+fontcolor=draculafg,
+backgroundcolor=draculabg,
+linecolor=draculafg,
+}
 \mdfdefinestyle{darkQuesion}{%
-  fontcolor=draculafg,
-  backgroundcolor=draculabg,
-  linecolor=draculafg,
-  linewidth=1pt
-  }
+fontcolor=draculafg,
+backgroundcolor=draculabg,
+linecolor=draculafg,
+linewidth=1pt
+}
 % \mdfdefinestyle{darkAnswer}{%
 %    }
 % \mdfdefinestyle{darkQuesion}{%
@@ -124,14 +124,14 @@
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 \newcommand{\twocase}[2]{\begin{enumerate}
-                        \item[$ \implies$]{
-                            #1
-                            }
-                        \bigskip
-                        \item[$ \impliedby$]{
-                          #2
+                      \item[$ \implies$]{
+                          #1
                           }
-                        \end{enumerate}}
+                      \bigskip
+                      \item[$ \impliedby$]{
+                        #2
+                        }
+                      \end{enumerate}}
 
 % --------------------------------------------------------------
 %                         Renew Commands
@@ -145,12 +145,12 @@
 \end{mdframed}
 \newpage
 \begin{mdframed}[style=darkQuesion]
-  #1
-    \end{mdframed}
+#1
+  \end{mdframed}
 \begin{mdframed}[style=darkAnswer]
-  #2
-    \end{mdframed}
-    \newpage
+#2
+  \end{mdframed}
+  \newpage
 }
 
 \begin{document}
@@ -281,17 +281,17 @@ Let $\mathrm{E}$ be a nonempty set of real numbers that is bounded above. Then a
 }
 \boxset{Principle of mathematical induction}
 {
-  For each natural number $n$, let $S(n)$ be some mathematical assertion. Suppose $S(1)$ is true. Also suppose that whenever $k$ is a natural number for which $S(k)$ is true, then $S(k+1)$ is also true. Then $S(n)$ is true for every natural number $n$.
+For each natural number $n$, let $S(n)$ be some mathematical assertion. Suppose $S(1)$ is true. Also suppose that whenever $k$ is a natural number for which $S(k)$ is true, then $S(k+1)$ is also true. Then $S(n)$ is true for every natural number $n$.
 }
 \boxset{Archimedean Property}
 {
-  For each pair of positive real numbers a and b, there is a natural number $n$ for which $n a>b$.
+For each pair of positive real numbers a and b, there is a natural number $n$ for which $n a>b$.
 }
 \boxset{The pigeonhole principle}
 {
-  The first observation regarding equipotence
-  (In the preliminaries we called two sets $A$ and $B$ equipotent provided there is a one-to-one mapping $f$ of $A$ onto $B$.)
-  is that for any natural numbers $n$ and $m$, the set $\{1, \ldots, n+m\}$ is not equipotent to the set $\{1, \ldots, n\}$.
+The first observation regarding equipotence
+(In the preliminaries we called two sets $A$ and $B$ equipotent provided there is a one-to-one mapping $f$ of $A$ onto $B$.)
+is that for any natural numbers $n$ and $m$, the set $\{1, \ldots, n+m\}$ is not equipotent to the set $\{1, \ldots, n\}$.
 }
 \boxset{The Nested Set Theorem}
 {Let $\left\{F_{n}\right\}_{n=1}^{\infty}$ be a descending countable collection of nonempty closed sets of real numbers for which $F_{1}$ bounded. Then
@@ -332,7 +332,7 @@ Any set $E$ of real numbers with positive outer measure contains a subset that f
 }
 \boxset{A measurable set that is not Borel}
 {
-  There is a measurable set, a subset of the Cantor set, that is not a Borel set.
+There is a measurable set, a subset of the Cantor set, that is not a Borel set.
 }
 \boxset{The function $\psi$ maps a non-Borel measurable set to a nonmeasurable set.}
 {
@@ -345,19 +345,19 @@ Then $\psi$ is a strictly increasing continuous function that maps $[0,1]$ onto 
 }
 \boxset{A continuous function defined on a measurable set is measurable.}
 {
-  true
+true
 }
 \boxset{A monotone function defined on an interval is measurable.}
 {
-  true
+true
 }
 \boxset{The composition of a continuous function and a measurable function is measurable.}
 {
-  true
+true
 }
 \boxset{The pointwise limit of a sequence of measurable function is measurable.}
 {
-  true
+true
 }
 \boxset{The Vitali Covering Lemma}
 {
@@ -368,7 +368,7 @@ $$
 }
 \boxset{Jordan decomposition of a function of bounded variation}
 {
-  We call the expression of a function of bounded variation $f$ as the difference of increasing functions a Jordan decomposition of $f$.
+We call the expression of a function of bounded variation $f$ as the difference of increasing functions a Jordan decomposition of $f$.
 }
 \boxset{Indefinite integral of a Lebesgue integrable function over a closed, bounded interval.}
 {
@@ -449,7 +449,7 @@ $$
 }
 \boxset{The Lebesgue Covering Lemma}
 {
-  Let $\left\{\mathcal{O}_{\lambda}\right\}_{\lambda \in \Lambda}$ be an open cover of a compact metric space $X$. Then there is a number $\epsilon>0$, such that for each $x \in X$, the open ball $B(x, \epsilon)$ is contained in some member of the cover.
+Let $\left\{\mathcal{O}_{\lambda}\right\}_{\lambda \in \Lambda}$ be an open cover of a compact metric space $X$. Then there is a number $\epsilon>0$, such that for each $x \in X$, the open ball $B(x, \epsilon)$ is contained in some member of the cover.
 }
 
 
@@ -810,80 +810,245 @@ $$
 }
 
 \boxset{$\sigma$-algebra}
-{}
+{
+A collection of subsets of $\mathbf{R}$ is called an $\sigma$-algebra provided it contains $\mathbf{R}$ and is closed with respect to the formation of complements and countable unions; by De Morgan's Identities, such a collection is also closed with respect to the formation of countable intersections. The preceding proposition tells us that the collection of measurable sets is a $\sigma$-algebra.
+}
 \boxset{Borel set}
-{}
+{
+The intersection of all the $\sigma$-algebras of subsets of $\mathbf{R}$ that contain the open sets is a $\sigma$-algebra called the Borel $\sigma$-algebra; members of this collection are called Borel sets.
+}
 \boxset{Measurable set}
-{}
+{
+The collection $\mathcal{M}$ of measurable sets is a $\sigma$-algebra that contains the $\sigma$-algebra $\mathcal{B}$ of Borel sets. Each interval, each open set, each closed set, each $G_{\delta}$ set, and each $F_{\sigma}$ set is measurable.
+}
 \boxset{A property that holds almost everywhere}
-{}
+{
+For a measurable set $E$, we say that a property holds almost everywhere on $E$, or it holds for almost all $x \in E$, provided there is a subset $E_{0}$ of $E$ for which $m\left(E_{0}\right)=0$ and the property holds for all $x \in E \sim E_{0}$.
+}
 \boxset{The Cantor set}
-{}
+{
+We define the Cantor set $\mathbf{C}$ by
+$$
+\mathbf{C}=\bigcap_{k=1}^{\infty} C_{k} .
+$$
+The collection $\left\{C_{k}\right\}_{k=1}^{\infty}$ possesses the following two properties:\[\ \]
+(i) $\left\{C_{k}\right\}_{k=1}^{\infty}$ is a descending sequence of closed sets;\[\ \]
+(ii) For each $k, C_{k}$ is the disjoint union of $2^{k}$ closed intervals, each of length $1 / 3^{k}$.
+}
 \boxset{The Cantor-Lebesgue function $\varphi$}
-{}
-\boxset{The function $\psi(x):=\varphi(x)+x$}
-{}
+{
+The Cantor-Lebesgue function $\varphi$ is an increasing continuous function that maps $[0,1]$ onto $[0,1]$. Its derivative exists on the open set $\mathcal{O}$, the complement in $[0,1]$ of the Cantor set,
+$$
+\varphi^{\prime}=0 \text { on } \mathcal{O} \text { while } m(\mathcal{O})=1
+$$
+}
 \boxset{Measurable function}
-{}
+{
+Let the function $f$ have a measurable domain $E$. Then the following statements are equivalent:\[\ \]
+(i) For each real number $c$, the set $\{x \in E \mid f(x)>c\}$ is measurable.\[\ \]
+(ii) For each real number $c$, the set $\{x \in E \mid f(x) \geq c\}$ is measurable.\[\ \]
+(iii) For each real number $c$, the set $\{x \in E \mid f(x)<c\}$ is measurable.\[\ \]
+(iv) For each real number $c$, the set $\{x \in E \mid f(x) \leq c\}$ is measurable.\[\ \]
+Each of these properties implies that for each extended real number $c$, the set $\{x \in E \mid f(x)=c\}$ is measurable.
+}
 \boxset{Upper and lower Riemann integrals of a bounded function}
-{}
+{
+Define the lower and upper Darboux sums for $f$ with respect to $P$, respectively, by
+$$
+L(f, P)=\sum_{i=1}^{n} m_{i} \cdot\left(x_{i}-x_{i-1}\right)
+$$
+and
+$$
+U(f, P)=\sum_{i=1}^{n} M_{i} \cdot\left(x_{i}-x_{i-1}\right),
+$$
+where, ${ }^{1}$ for $1 \leq i \leq n$,
+$$
+m_{i}=\inf \left\{f(x) \mid x_{i-1}<x<x_{i}\right\} \text { and } M_{i}=\sup \left\{f(x) \mid x_{i-1}<x<x_{i}\right\} .
+$$
+We then define the lower and upper Riemann integrals of $f$ over $[a, b]$, respectively, by
+$(R) \int_{a}^{b} f=\sup \{L(f, P) \mid P$ a partition of $[a, b]\}$
+and
+$(R) \bar{\int}_{a}^{b} f=\inf \{U(f, P) \mid P$ a partition of $[a, b]\}$
+}
 \boxset{Upper and lower Lebesgue integrals of a measurable function}
-{}
-\boxset{Lebesgue integrability of a bounded function on a measurable set of finite measure Convergence in measure}
-{}
+{
+Let $f$ be a bounded real-valued function defined on a set of finite measure $E$. By analogy with the Riemann integral, we define the lower and upper Lebesgue integral, respectively, of $f$ over $E$ to be
+$$
+\sup \left\{\int_{E} \varphi \mid \varphi \text { simple and } \varphi \leq f \text { on } E,\right\}
+$$
+and
+$$
+\inf \left\{\int_{E} \psi \mid \psi \text { simple and } f \leq \psi \text { on } E\right\}
+$$
+}
+\boxset{Lebesgue integrability of a bounded function on a measurable set of finite measure}
+{
+A bounded function $f$ on a domain $E$ of finite measure is said to be Lebesgue integrable over $E$ provided its upper and lower Lebesgue integrals over $E$ are equal. The common value of the upper and lower integrals is called the Lebesgue integral, or simply the integral, of $f$ over $E$ and is denoted by $\int_{E} f$.
+}
+\boxset{Convergence in measure}
+{
+Let $\left\{f_{n}\right\}$ be a sequence of measurable functions on $E$ and $f$ a measurable function on $E$ for which $f$ and each $f_{n}$ is finite a.e. on $E$. The sequence $\left\{f_{n}\right\}$ is said to converge in measure on $E$ to $f$ provided for each $\eta>0$,
+$$
+\lim _{n \rightarrow \infty} m\left\{x \in E|| f_{n}(x)-f(x) \mid>\eta\right\}=0
+$$
+}
 \boxset{Upper and lower derivatives of a function at a point in its domain}
-{}
+{
+For a real-valued function $f$ and an interior point $x$ of its domain, the upper derivative of $f$ at $x, \bar{D} f(x)$ and the lower derivative of $f$ at $x, \underline{D} f(x)$ are defined as follows:
+$$
+\begin{aligned}
+&\bar{D} f(x)=\lim _{h \rightarrow 0}\left[\sup _{0<|t| \leq h} \frac{f(x+t)-f(x)}{t}\right] \\
+&\underline{D} f(x)=\lim _{h \rightarrow 0}\left[\inf _{0<|t| \leq h} \frac{f(x+t)-f(x)}{t}\right] .
+\end{aligned}
+$$
+}
 \boxset{Differentiability of a function at a point in its domain}
-{}
+{
+We say that $f$ is difierentiable at $x$ and define $f^{\prime}(x)$ to be the common value of the upper and lower derivatives.
+}
 \boxset{Variation of function with respect to a partition}
-{}
+{
+Let $f$ be a real-valued function defined on the closed, bounded interval $[a, b]$ and $P=\left\{x_{0}, \ldots, x_{k}\right\}$ be a partition of $[a, b]$. Define the variation of $f$ with respect to $P$ by
+$$
+V(f, P)=\sum_{i=1}^{k}\left|f\left(x_{i}\right)-f\left(x_{i-1}\right)\right|
+$$
+}
 \boxset{Total variation of a function}
-{}
+{
+\[T V(f)=\sup \{V(f, P) \mid P \text { a partition of }[a, b]\}\]
+}
 \boxset{Function of bounded variation}
-{}
+{
+A real-valued function $f$ on the closed, bounded interval $[a, b]$ is said to be of bounded variation on $[a, b]$ provided
+$$
+T V(f)<\infty
+$$
+}
 \boxset{Absolute continuity of a function on a closed, bounded interval}
-{}
+{
+A real-valued function $f$ on a closed, bounded interval $[a, b]$ is said to be absolutely continuous on $[a, b]$ provided for each $\epsilon>0$, there is $a \delta>0$ such that for every finite disjoint collection $\left\{\left(a_{k}, b_{k}\right)\right\}_{k=1}^{n}$ of open intervals in $(a, b)$,
+$$
+\text { if } \sum_{k=1}^{n}\left[b_{k}-a_{k}\right]<\delta \text {, then } \sum_{k=1}^{n}\left|f\left(b_{k}\right)-f\left(a_{k}\right)\right|<\epsilon \text {. }
+$$
+}
 \boxset{Lipschitz function}
-{}
+{
+The function $f$ is said to be Lipschitz provided there is a $c \geq 0$ for which
+$$
+\left|f\left(x^{\prime}\right)-f(x)\right| \leq c \cdot\left|x^{\prime}-x\right| \text { for all } x^{\prime}, x \in E .
+$$
+}
 \boxset{Total variation function}
-{}
-\boxset{Divided difference function}
-{}
-\boxset{Average value function}
-{}
+{
+Therefore the function $x \mapsto T V\left(f_{[a, x]}\right)$, which we call the total variation function for $f$, is a real-valued increasing function on $[a, b]$. Moreover, for $a \leq u<v \leq b$, if we take the crudest partition $P=\{u, v\}$ of $[u, v]$, we have
+$$
+f(u)-f\left(v_{0}\right) \leq|f(v)-f(u)|=V\left(f_{[u, v]}, P\right) \leq T V\left(f_{[u, v]}\right)=T V\left(f_{[a, v]}\right)-T V\left(f_{[a, u]}\right) .
+$$
+Thus
+$$
+f(v)+T V\left(f_{[a, v]}\right) \geq f(u)+T V\left(f_{[a, u]}\right) \text { for all } a \leq u<v \leq b
+$$
+}
+\boxset{Divided difference function and Average value function}
+{
+Let $f$ be integrable over the closed, bounded interval $[a, b]$. Extend $f$ to take the value $f(b)$ on $(b, b+1]$. For $0<h \leq 1$, define the divided difierence function Diff $h$ and average value function $\mathrm{Av}_{h} f$ of $[a, b]$ by
+$\operatorname{Diff}_{h} f(x)=\frac{f(x+h)-f(x)}{h}$ and $\operatorname{Av}_{h} f(x)=\frac{1}{h} \cdot \int_{x}^{x+h} f$ for all $x \in[a, b]$
+By a change of variables in the integral and cancellation, for all $a \leq u<v \leq b$,
+$$
+\int_{u}^{v} \operatorname{Diff}_{h} f=\mathrm{Av}_{h} f(v)-\mathrm{Av}_{h} f(u)
+$$
+}
 \boxset{A cover of a set in the sense of Vitali}
-{}
+{
+A collection $\mathcal{F}$ of closed, bounded, nondegenerate intervals is said to cover a set $E$ in the sense of Vitali provided for each point $x$ in $E$ and $\epsilon>0$, there is an interval I in $\mathcal{F}$ that contains $x$ and has $\ell(I)<\epsilon$.
+}
 \boxset{Uniform integrability}
-{}
+{
+A family $\mathcal{F}$ of measurable functions on $E$ is said to be uniformly integrable over $E$ provided for each $\epsilon>0$, there is a $\delta>0$ such that for each $f \in \mathcal{F}$,
+$$
+\text { if } A \subseteq E \text { is measurable and } m(A)<\delta \text {, then } \int_{A}|f|<\epsilon
+$$
+}
 \boxset{Essentially bounded function}
-{}
+{
+We call a function $f \in \mathcal{F}$ essentially bounded provided there is some $M \geq 0$, called an essential upper bound for $f$, for which
+$$
+|f(x)| \leq M \text { for almost all } x \in E
+$$
+}
 \boxset{Essential supremum of a function}
-{}
+{
+For a function $f$ in $L^{\infty}(E)$, define $\|f\|_{\infty}$ to be the infimum of the essential upper bounds for $f$. We call $\|f\|_{\infty}$ the essential supremum of $f$ and claim that $\|\cdot\|_{\infty}$ is a norm on $L^{\infty}(E)$.
+}
 \boxset{Conjugate function}
-{}
+{
+It is convenient, for $f \in L^{p}(E), f \neq 0$, to call the function $f^{*}$ defined above the conjugate function of $f$.
+}
 \boxset{Linear functional on a linear space}
-{}
+{
+A linear functional on a linear space $X$ is a real-valued function $T$ on $X$ such that for $g$ and $h$ in $X$ and $\alpha$ and $\beta$ real numbers,
+$$
+T(\alpha \cdot g+\beta \cdot h)=\alpha \cdot T(g)+\beta \cdot T(h)
+$$
+}
 \boxset{Bounded linear functional on a normed linear space}
-{}
+{
+For a normed linear space $X$, a linear functional $T$ on $X$ is said to be bounded provided there is an $M \geq 0$ for which
+$$
+|T(f)| \leq M \cdot\|f\| \text { for all } f \in X
+$$
+The infimum of all such $M$ is called the norm of $T$ and denoted by $\|T\|_{*}$.
+}
 \boxset{Metric on a nonempty set}
-{}
+{
+Let $X$ be a nonempty set. A function $\rho: X \times X \rightarrow \mathbf{R}$ is called a metric provided for all $x, y$, and $z$ in $X$\[\ \]
+(i) $\rho(x, y) \geq 0$;\[\ \]
+(ii) $\rho(x, y)=0$ if and only if $x=y$;\[\ \]
+(iii) $\rho(x, y)=\rho(y, x)$;\[\ \]
+(iv) $\rho(x, y) \leq \rho(x, z)+\rho(z, y)$.
+}
 \boxset{Point of closure of a subset $E$ of a metric space $X$}
-{}
-\boxset{Uniform continuity for a function between metric spaces}
-{}
+{
+For a set $E$ of real numbers, a real number $x$ is called a point of closure of $E$ provided every open interval that contains $x$ also contains a point in $E$. The collection of points of closure of $E$ is called the closure of $E$ and denoted by $\bar{E}$.
+}
 \boxset{Separable metric space}
-{}
+{
+A subset $D$ of a metric space $X$ is said to be dense in $X$ provided every nonempty open subset of $X$ contains a point of $D$. A metric space $X$ is said to be separable provided there is a countable subset of $X$ that is dense in $X$.
+}
 \boxset{Contracting sequence of subsets of a metric space}
-{}
+{
+For a nonempty subset $E$ of a metric space $(X, \rho)$, we define the diameter of $E$, $\operatorname{diam} E, b y$
+$$
+\operatorname{diam} E=\sup \{\rho(x, y) \mid x, y \in E\} \text {. }
+$$
+We say $E$ is bounded provided it has finite diameter. A descending sequence $\left\{E_{n}\right\}_{n=1}^{\infty}$ of nonempty subsets of $X$ is called a contracting sequence provided
+$$
+\lim _{n \rightarrow \infty} \operatorname{diam}\left(E_{n}\right)=0
+$$
+}
 \boxset{Compact metric space}
-{}
+{
+A metric space $X$ is called compact provided every open cover of $X$ has a finite subcover. A subset $K$ of $X$ is called compact provided $K$, considered as a metric subspace of $X$, is compact.
+}
 \boxset{Sequentially compact metric space}
-{}
+{
+A metric space $X$ is said to be sequentially compact provided every sequence in $X$ has a subsequence that converges to a point in $X$.
+}
 \boxset{Totally bounded metric space}
-{}
+{
+A metric space $X$ is said to be totally bounded provided for each $\epsilon>0$, the space $X$ can be covered by a finite number of open balls of radius $\epsilon.$ A subset $E$ of $X$ is called totally bounded provided that $E$, considered as a subspace of the metric space $X$, is totally bounded.
+}
 \boxset{Lebesgue number for an open cover}
-{}
+{
+If $\left\{\mathcal{O}_{\lambda}\right\}_{\lambda \in \Lambda}$ is an open cover of a metric space $X$, then each point $x \in X$ is contained in a member of the cover, $\mathcal{O}_{\lambda}$, and since $\mathcal{O}_{\lambda}$ is open, there is some $\epsilon>0$, such that
+$$
+B(x, \epsilon) \subseteq \mathcal{O}_{\lambda}
+$$
+In general, the $\epsilon$ depends on the choice of $x$. The following proposition tells us that for a compact metric space this containment holds uniformly in the sense that we can find $\epsilon$ independently of $x \in X$ for which the inclusion (4) holds. A positive number $\epsilon$ with this property is called a Lebesgue number for the $\operatorname{cover}\left\{\mathcal{O}_{\lambda}\right\}_{\lambda \in \Lambda}$.
+}
 \boxset{Nowhere dense subset of a metric space}
-{}
+{
+A subset $E$ of a metric space $X$ is called nowhere dense provided its closure $\bar{E}$ is hollow.
+}
 
 \end{document}

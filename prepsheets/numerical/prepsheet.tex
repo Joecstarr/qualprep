@@ -1,0 +1,158 @@
+\documentclass[17pt]{extarticle}
+
+
+\usepackage{amsmath, amssymb, amsthm, amsfonts, mathrsfs}
+\usepackage{times, flexisym, mdframed, xcolor}
+\usepackage{ulem,multicol}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{tikz-cd}%   Margins
+% \usepackage[left=1in,right=1in, top=2in, bottom=2in]{geometry}
+\usepackage[paperwidth= 8in,paperheight=5in,left=.25in,right=.25in, top=.25in, bottom=.25in]{geometry}
+%
+
+\usepackage{draculatheme}
+\mdfdefinestyle{darkAnswer}{%
+  fontcolor=draculafg,
+  backgroundcolor=draculabg,
+  linecolor=draculafg,
+  }
+\mdfdefinestyle{darkQuesion}{%
+  fontcolor=draculafg,
+  backgroundcolor=draculabg,
+  linecolor=draculafg,
+  linewidth=1pt
+  }
+% \mdfdefinestyle{darkAnswer}{%
+%    }
+% \mdfdefinestyle{darkQuesion}{%
+%   linewidth=1pt
+%    }
+
+% --------------------------------------------------------------
+%                         New Commands
+% --------------------------------------------------------------
+\newcommand{\m}{\scalebox{0.5}[1.0]{$-$}}
+\newcommand{\lrb}[1]{\left[#1\right]}
+\newcommand{\lrp}[1]{\left(#1\right)}
+\newcommand{\lrs}[1]{\left\{#1\right\}}
+\newcommand{\lra}[1]{\left<#1\right>}
+\newcommand{\gof}[1]{g\left(#1\right)}
+\newcommand{\fof}[1]{f\left(#1\right)}
+\newcommand{\dof}[1]{d\left(#1\right)}
+\newcommand{\kof}[1]{k\left(#1\right)}
+\newcommand{\mof}[1]{m\left(#1\right)}
+\newcommand{\pof}[1]{\phi\left(#1\right)}
+\newcommand{\om}[1]{m^{\ast}\left(#1\right)}
+\newcommand{\measure}[1]{m\left(#1\right)}
+\newcommand{\supmet}[1]{\left\|#1\right\|_{\infty}}
+\newcommand{\hof}[1]{h\left(#1\right)}
+\newcommand{\met}[3]{\rho_{#1}\lrp{#2,#3}}
+\newcommand{\IR}{\mathscr{R}}
+\newcommand{\rank}[1]{\text{rank}\left(#1\right)}
+\newcommand{\sof}[1]{\sigma\left(#1\right)}
+\newcommand{\Zof}[1]{Z\left(#1\right)}
+\newcommand{\gofinv}[1]{g^{\m1}\left(#1\right)}
+\newcommand{\fofinv}[1]{f^{\m1}\left(#1\right)}
+\newcommand{\Zofinv}[1]{Z^{\m1}\left(#1\right)}
+\newcommand{\pofinv}[1]{\ph{i=1}^{\m1}\left(#1\right)}
+\newcommand{\nmod}[2]{#1\,\left(\text{mod}\,#2\right)}
+\newcommand{\ngcd}[2]{\text{gcd}\left(#1\,,\,#2\right)}
+\newcommand{\nlcm}[2]{\text{lcm}\left(#1\,,\,#2\right)}
+\newcommand{\grp}[2]{\left(#1\,,\,#2\right)}
+\newcommand{\GL}[2]{\mathrm{GL}_{#1}\lrp{#2}}
+\newcommand{\SL}[2]{\mathrm{SL}_{#1}\lrp{#2}}
+\newcommand{\Mn}[2]{M_{#1}\left(#2\right)}
+\newcommand{\nord}[2]{\text{ord}_{#1}\left(#2\right)}
+\newcommand{\ord}[1]{\text{ord}\left(#1\right)}
+\newcommand{\dom}[1]{\text{dom}\left(#1\right)}
+\newcommand{\ran}[1]{\text{ran}\left(#1\right)}
+\newcommand{\degr}[1]{\text{deg}\left(#1\right)}
+\newcommand{\krn}[1]{\text{ker}\left(#1\right)}
+\newcommand{\intr}[1]{\text{int}\left(#1\right)}
+\newcommand{\ball}[2]{B_{#1}\left(#2\right)}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Opn}{\mathcal{O}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\notsubset}{\not\subset}
+% \newcommand{\right)}{\mathbb{R}^{+}}
+\newcommand{\Dn}{\Delta^{n}}
+\renewcommand{\C}{\mathbb{C}}
+\newcommand{\primeDec}{p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_m^{\alpha_m}p_{m+1}^{\alpha_{m+1}}}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\norm}[1]{\left\vert\left\vert#1\right\vert\right\vert}
+\newcommand{\Zm}[1]{\mathbb{Z}_{#1}}
+\newcommand{\Zmx}[1]{\mathbb{Z}_{#1}^{\times}}
+\newcommand{\Zp}{\mathbb{Z}_p}
+\newcommand{\numb}[1]{\noindent{\bf #1)}}
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+\newcommand{\inv}[1]{#1^{\m1}}
+\newcommand{\totient}[1]{\varphi\left(#1\right)}
+\newcommand{\vhalfpg}{\vspace{5in}}
+\newcommand{\vthirdpg}{\vspace{3in}}
+\newcommand{\vquartpg}{\vspace{2in}}
+\newcommand{\Assoc}[1]{\item[Associativity:]{#1}}
+\newcommand{\Invs}[1]{\item[Inverses:]{#1}}
+\newcommand{\Clos}[1]{\item[Closure:]{#1}}
+\newcommand{\Ident}[1]{\item[Identity:]{#1}}
+\newcommand{\Abel}[1]{\item[Abelian:]{#1}}
+\newcommand{\Tv}{\text{Tv}}
+\newcommand{\V}{\text{V}}
+\newcommand{\Ip}[1]{\text{Im}#1}
+\newcommand{\LP}{\left(}
+\newcommand{\RP}{\right)}
+\newcommand{\LS}{\left\lbrace}
+\newcommand{\RS}{\right\rbrace}
+\newcommand{\LB}{\left[}
+\newcommand{\RB}{\right]}
+\newcommand{\MM}{\ \middle|\ }
+\newcommand{\msr}[1]{m\left(#1\right)}
+\newcommand{\dist}[1]{\text{d}\left(#1\right)}
+\newcommand{\Diff}[3]{Diff_{#1}#2\left(#3\right)}
+\newcommand{\Av}[3]{Av_{#1}#2\left(#3\right)}
+\newcommand{\cball}[2]{\overline{B}_{#1}\left(#2\right)}
+\newcommand{\opn}{\mathcal{O}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\wind}[1]{n\lrp{\gamma;\ #1}}
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\newcommand{\twocase}[2]{\begin{enumerate}
+                        \item[$ \implies$]{
+                            #1
+                            }
+                        \bigskip
+                        \item[$ \impliedby$]{
+                          #2
+                          }
+                        \end{enumerate}}
+
+% --------------------------------------------------------------
+%                         Renew Commands
+% --------------------------------------------------------------
+% \renewcommand{\det}[1]{\text{det}\left(#1\right)}
+\renewcommand{\bar}[1]{\overline{#1}}
+% \renewcommand{\cos}[1]{\text{cos}\left(#1\right)}
+
+\newcommand{\boxset}[2]{\begin{mdframed}[style=darkQuesion]
+#1
+\end{mdframed}
+\newpage
+\begin{mdframed}[style=darkQuesion]
+  #1
+    \end{mdframed}
+\begin{mdframed}[style=darkAnswer]
+  #2
+    \end{mdframed}
+    \newpage
+}
+
+\begin{document}
+
+\end{document}

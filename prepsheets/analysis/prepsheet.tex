@@ -229,85 +229,228 @@
 \boxset{Harnack's Theorem}
 {Let $G$ be a region. (a) The metric space Har( $G)$ is complete. (b) If $\left\{u_{n}\right\}$ is a sequence in $\operatorname{Har}(G)$ such that $u_{1} \leq u_{2} \leq \ldots$ then either $u_{n}(z) \rightarrow \infty$ uniformly on compact subsets of $G$ or $\left\{u_{n}\right\}$ converges in Har $(G)$ to a harmonic function.}
 \boxset{The field axioms}
-{}
+{
+Commutativity of Addition: For all real numbers $a$ and $b$,
+$$
+a+b=b+a \text {. }
+$$
+Associativity of Addition: For all real numbers $a, b$, and $c$,
+$$
+(a+b)+c=a+(b+c) .
+$$
+The Additive Identity: There is a real number, denoted by 0 , such that
+$$
+0+a=a+0=a \quad \text { for all real numbers } a \text {. }
+$$
+The Additive Inverse: For each real number $a$, there is a real number $b$ such that
+$$
+a+b=0
+$$
+Commutativity of Multiplication: For all real numbers $a$ and $b$,
+$$
+a b=b a \text {. }
+$$
+Associativity of Multiplication: For all real numbers $a, b$, and $c$,
+$$
+(a b) c=a(b c) \text {. }
+$$
+The Multiplicative Identity: There is a real number, denoted by 1 , such that
+$$
+1 a=a 1=a \quad \text { for all real numbers } a .
+$$
+The Multiplicative Inverse: For each real number $a \neq 0$, there is a real number $b$ such that
+$$
+a b=1 .
+$$
+The Distributive Property: For all real numbers $a, b$, and $c$,
+$$
+a(b+c)=a b+a c
+$$
+The Nontriviality Assumption:
+$1 \neq 0 .$
+}
 \boxset{The positivity axioms}
-{}
+{
+P1 If $a$ and $b$ are positive, then $a b$ and $a+b$ are also positive.\[\ \]
+P2 For a real number $a$, exactly one of the following three alternatives is true:\[\ \]
+$a$ is positive, $\quad-a$ is positive, $\quad a=0 .$
+}
 \boxset{The completeness axiom}
-{}
-\boxset{The triangle inequality}
-{}
+{
+Let $\mathrm{E}$ be a nonempty set of real numbers that is bounded above. Then among the set of upper bounds for $\mathrm{E}$ there is a smallest, or least, upper bound.
+}
 \boxset{Principle of mathematical induction}
-{}
+{
+  For each natural number $n$, let $S(n)$ be some mathematical assertion. Suppose $S(1)$ is true. Also suppose that whenever $k$ is a natural number for which $S(k)$ is true, then $S(k+1)$ is also true. Then $S(n)$ is true for every natural number $n$.
+}
 \boxset{Archimedean Property}
-{}
+{
+  For each pair of positive real numbers a and b, there is a natural number $n$ for which $n a>b$.
+}
 \boxset{The pigeonhole principle}
-{}
-\boxset{The Heine-Borel Theorem}
-{}
+{
+  The first observation regarding equipotence
+  (In the preliminaries we called two sets $A$ and $B$ equipotent provided there is a one-to-one mapping $f$ of $A$ onto $B$.)
+  is that for any natural numbers $n$ and $m$, the set $\{1, \ldots, n+m\}$ is not equipotent to the set $\{1, \ldots, n\}$.
+}
 \boxset{The Nested Set Theorem}
-{}
+{Let $\left\{F_{n}\right\}_{n=1}^{\infty}$ be a descending countable collection of nonempty closed sets of real numbers for which $F_{1}$ bounded. Then
+$$
+\bigcap_{n=1}^{\infty} F_{n} \neq \emptyset \text {. }
+$$}
 \boxset{The Bolzano-Weierstrass Theorem}
-{}
-\boxset{The Cauchy Convergence Criterion}
-{}
+{
+Every bounded sequence of real numbers has a convergent subsequence.
+}
 \boxset{The Extreme Value Theorem}
-{}
-\boxset{The Intermediate Value Theorem}
-{}
+{
+A continuous real-valued function on a nonempty closed, bounded set of real numbers takes a minimum and maximum value.
+}
 \boxset{Every interval is a measurable set.}
-{}
+{true}
 \boxset{The translate of a measurable set is measurable.}
-{}
+{true}
 \boxset{Continuity of measure}
-{}
+{
+Lebesgue measure possesses the following continuity properties:\[\ \]
+(i) If $\left\{A_{k}\right\}_{k=1}^{\infty}$ is an ascending collection of measurable sets, then
+$$
+m\left(\bigcup_{k=1}^{\infty} A_{k}\right)=\lim _{k \rightarrow \infty} m\left(A_{k}\right)
+$$
+(ii) If $\left\{B_{k}\right\}_{k=1}^{\infty}$ is a descending collection of measurable sets and $m\left(B_{1}\right)<\infty$, then
+$$
+m\left(\bigcap_{k=1}^{\infty} B_{k}\right)=\lim _{k \rightarrow \infty} m\left(B_{k}\right)
+$$
+}
 \boxset{The Borel-Cantelli Lemma}
-{}
+{
+Lemma Let $\left\{E_{k}\right\}_{k=1}^{\infty}$ be a countable collection of measurable sets for which $\sum_{k=1}^{\infty} m\left(E_{k}\right)<\infty$. Then almost all $x \in \mathbf{R}$ belong to at most finitely many of the $E_{k}$ 's.
+}
 \boxset{Vitali's Theorem}
-{}
+{
+Any set $E$ of real numbers with positive outer measure contains a subset that fails to be measurable.
+}
 \boxset{A measurable set that is not Borel}
-{}
-\boxset{The function $\psi$ maps a non-Borel measurable set to a nonmeas. set.}
-{}
+{
+  There is a measurable set, a subset of the Cantor set, that is not a Borel set.
+}
+\boxset{The function $\psi$ maps a non-Borel measurable set to a nonmeasurable set.}
+{
+Let $\varphi$ be the Cantor-Lebesgue function and define the function $\psi$ on $[0,1]$ by
+$$
+\psi(x)=\varphi(x)+x \text { for all } x \in[0,1]
+$$
+Then $\psi$ is a strictly increasing continuous function that maps $[0,1]$ onto $[0,2]$,\[\ \]
+(ii) maps a measurable set, a subset of the Cantor set, onto a nonmeasurable set.
+}
 \boxset{A continuous function defined on a measurable set is measurable.}
-{}
+{
+  true
+}
 \boxset{A monotone function defined on an interval is measurable.}
-{}
+{
+  true
+}
 \boxset{The composition of a continuous function and a measurable function is measurable.}
-{}
+{
+  true
+}
 \boxset{The pointwise limit of a sequence of measurable function is measurable.}
-{}
+{
+  true
+}
 \boxset{The Vitali Covering Lemma}
-{}
+{
+Let $E$ be a set of finite outer measure and $\mathcal{F}$ a collection of closed, bounded intervals that covers $E$ in the sense of Vitali. Then for each $\epsilon>0$, there is a finite disjoint subcollection $\left\{I_{k}\right\}_{k=1}^{n}$ of $\mathcal{F}$ for which
+$$
+m^{*}\left[E \sim \bigcup_{k=1}^{n} I_{k}\right]<\epsilon
+$$
+}
 \boxset{Jordan decomposition of a function of bounded variation}
-{}
+{
+  We call the expression of a function of bounded variation $f$ as the difference of increasing functions a Jordan decomposition of $f$.
+}
 \boxset{Indefinite integral of a Lebesgue integrable function over a closed, bounded interval.}
-{}
+{
+We here call a function $f$ on a closed, bounded interval $[a, b]$ the indefinite integral of $g$ over $[a, b]$ provided $g$ is Lebesgue integrable over $[a, b]$ and
+$$
+f(x)=f(a)+\int_{a}^{x} g \text { for all } x \in[a, b]
+$$
+}
 \boxset{Additivity over domains of integration}
-{}
+{
+Let $f$ be integrable over $E$. Assume $A$ and $B$ are disjoint measurable subsets of $E$. Then
+$$
+\int_{A \cup B} f=\int_{A} f+\int_{B} f .
+$$
+}
 \boxset{Lebesgue's Theorem on Riemann integrability}
-{}
+{
+Let $f$ be a bounded function on the closed, bounded interval $[a, b]$. Then $f$ is Riemann integrable over $[a, b]$ if and only if the set of points in $[a, b]$ at which $f$ fails to be continuous has measure zero.
+}
 \boxset{Jordan's Theorem}
-{}
+{
+A function $f$ is of bounded variation on the closed, bounded interval $[a, b]$ if and only if it is the difference of two increasing functions on $[a, b]$.
+}
 \boxset{Lebesgue Decomposition for a function of bounded variation}
-{}
+{
+The above decomposition of a function of bounded variation $f$ as the sum $g+h$ of two functions of bounded variation, where $g$ is absolutely continuous and $h$ is singular, is called a Lebesgue decomposition of $f$.
+}
 \boxset{Young's Inequality}
-{}
+{
+For $1<p<\infty, q$ the conjugate of $p$, and any two positive numbers a and $b$,
+$$
+a b \leq \frac{a^{p}}{p}+\frac{b^{q}}{q}
+$$
+}
 \boxset{Holder's Inequality}
-{}
+{
+Let $E$ be a measurable set, $1 \leq p<\infty$, and $q$ the conjugate of $p$. If $f$ belongs to $L^{p}(E)$ and $g$ belongs to $L^{q}(E)$, then their product $f \cdot g$ is integrable over $E$ and Hölder's Inequality
+Moreover, if $f \neq 0$, the function ${ }^{2} f^{*}=\|f\|_{p}^{1-p} \cdot \operatorname{sgn}(f) \cdot|f|^{p-1}$ belongs to $L^{q}(X, \mu)$,
+$$
+\int_{E} f \cdot f^{*}=\|f\|_{p} \text { and }\left\|f^{*}\right\|_{q}=1
+$$
+}
 \boxset{Minkowski's Inequality}
-{}
+{
+Let $E$ be a measurable set and $1 \leq p \leq \infty$. If the functions $f$ and $g$ belong to $L^{p}(E)$, then so does their sum $f+g$ and, moreover,
+$$
+\|f+g\|_{p} \leq\|f\|_{p}+\|g\|_{p}
+$$
+}
 \boxset{The Cauchy-Schwarz Inequality}
-{}
+{
+Let $E$ be a measurable set and $f$ and $g$ measurable functions on $E$ for which $f^{2}$ and $g^{2}$ are integrable over $E$. Then their product $f \cdot g$ also is integrable over $E$ and
+$$
+\int_{E}|f g| \leq \sqrt{\int_{E} f^{2}} \cdot \sqrt{\int_{E} g^{2}}
+$$
+}
 \boxset{The Riesz-Fischer Theorem}
-{}
+{
+Let $E$ be a measurable set and $1 \leq p \leq \infty$. Then $L^{p}(E)$ is a Banach space. Moreover, if $\left\{f_{n}\right\} \rightarrow f$ in $L^{p}(E)$, a subsequence of $\left\{f_{n}\right\}$ converges pointwise a.e. on $E$ to $f$.
+}
 \boxset{The Riesz Representation Theorem for the Dual of $L^{p}(E)$}
-{}
+{
+Let $E$ be a measurable set, $1 \leq p<\infty$, and q the conjugate of $p$. For each $g \in L^{q}(E)$, define the bounded linear functional $\mathcal{R}_{g}$ on $L^{p}(E)$ by
+$$
+\mathcal{R}_{g}(f)=\int_{E} g \cdot f \text { for all } f \text { in } L^{p}(E)
+$$
+Then for each bounded linear functional $T$ on $L^{p}(E)$, there is a unique function $g \in L^{q}(E)$ for which
+$$
+\mathcal{R}_{g}=T, \text { and }\|T\|_{*}=\|g\|_{q} .
+$$
+}
 \boxset{$\epsilon-\delta$ Criterion for Continuity}
-{}
-\boxset{The Cantor Intersection Theorem}
-{}
+{
+A mapping $f$ from a metric space $(X, \rho)$ to a metric space $(Y, \sigma)$ is continuous at the point $x \in X$ if and only if for every $\epsilon>0$, there is $a \delta>0$ for which if $\rho\left(x, x^{\prime}\right)<\delta$, then $\sigma\left(f(x), f\left(x^{\prime}\right)\right)<\epsilon$, that is,
+$$
+f(B(x, \delta)) \subseteq B(f(x), \epsilon)
+$$
+}
 \boxset{The Lebesgue Covering Lemma}
-{}
+{
+  Let $\left\{\mathcal{O}_{\lambda}\right\}_{\lambda \in \Lambda}$ be an open cover of a compact metric space $X$. Then there is a number $\epsilon>0$, such that for each $x \in X$, the open ball $B(x, \epsilon)$ is contained in some member of the cover.
+}
 
 
 
@@ -592,11 +735,11 @@ $$
 where $\gamma$ is a constant chosen so that $\Gamma(1)=1$.
 }
 \boxset{Bohr-Mollerup Theorem}
-{Let $f$ be a function defined on $(0, \infty)$ such that $f(x)>0$ for all $x>0$. Suppose that $f$ has the following properties:
-(a) $\log f(x)$ is a convex function;
-(b) $f(x+1)=x f(x)$ for all $x$;
-(c) $f(1)=1$.
-Then $f(x)=\Gamma(x)$ for all $x$.
+{Let $f$ be a function defined on $(0, \infty)$ such that $f(x)>0$ for all $x>0$. Suppose that $f$ has the following properties:\[\ \]
+(a) $\log f(x)$ is a convex function;\[\ \]
+(b) $f(x+1)=x f(x)$ for all $x$;\[\ \]
+(c) $f(1)=1$.\[\ \]
+Then $f(x)=\Gamma(x)$ for all $x$.\[\ \]
 }
 
 \boxset{If $\operatorname{Re} z>0$ then}
@@ -628,15 +771,15 @@ $$
 
 \boxset{The Poisson kernel satisfies the following:}
 {
-(a) $\frac{1}{2 \pi} \int_{-\pi}^{\pi} P_{r}(\theta) d \theta=1$
-(b) $P_{r}(\theta)>0$ for all $\theta, P_{r}(-\theta)=P_{r}(\theta)$, and $P_{r}$ is periodic in $\theta$ with period $2 \pi$;
-(c) $P_{r}(\theta)<P_{r}(\delta)$ if $0<\delta<|\theta| \leq \pi$;
+(a) $\frac{1}{2 \pi} \int_{-\pi}^{\pi} P_{r}(\theta) d \theta=1$\[\ \]
+(b) $P_{r}(\theta)>0$ for all $\theta, P_{r}(-\theta)=P_{r}(\theta)$, and $P_{r}$ is periodic in $\theta$ with period $2 \pi$;\[\ \]
+(c) $P_{r}(\theta)<P_{r}(\delta)$ if $0<\delta<|\theta| \leq \pi$;\[\ \]
 (d) for each $\delta>0, \lim _{r \rightarrow 1^{-}} P_{r}(\theta)=0$ uniformly in $\theta$ for $\pi \geq|\theta| \geq \delta$.
 }
 \boxset{Let $D=\{z:|z|<1\}$ and suppose that $f: \partial D \rightarrow \mathbb{R}$ is a continuous function. Then}
-{there is a continuous function $u: D^{-} \rightarrow \mathbb{R}$ such that
-(a) $u(z)=f(z)$ for $z$ in $\partial D$;
-(b) $u$ is harmonic in $D$.
+{there is a continuous function $u: D^{-} \rightarrow \mathbb{R}$ such that\[\ \]
+(a) $u(z)=f(z)$ for $z$ in $\partial D$;\[\ \]
+(b) $u$ is harmonic in $D$.\[\ \]
 Moreover $u$ is unique and is defined by the formula $2.5$
 $$
 u\left(r e^{i \theta}\right)=\frac{1}{2 \pi} \int_{-\pi}^{\pi} P_{r}(\theta-t) f\left(e^{i t}\right) d t
@@ -668,10 +811,6 @@ $$
 
 \boxset{$\sigma$-algebra}
 {}
-\boxset{Cauchy sequence}
-{}
-\boxset{Continuity of a function at a point}
-{}
 \boxset{Borel set}
 {}
 \boxset{Measurable set}
@@ -685,8 +824,6 @@ $$
 \boxset{The function $\psi(x):=\varphi(x)+x$}
 {}
 \boxset{Measurable function}
-{}
-\boxset{Uniform convergence of a sequence of functions}
 {}
 \boxset{Upper and lower Riemann integrals of a bounded function}
 {}
@@ -704,7 +841,7 @@ $$
 {}
 \boxset{Function of bounded variation}
 {}
-\boxset{Absolute continuity of a function on a close, bounded interval}
+\boxset{Absolute continuity of a function on a closed, bounded interval}
 {}
 \boxset{Lipschitz function}
 {}
@@ -734,8 +871,6 @@ $$
 {}
 \boxset{Uniform continuity for a function between metric spaces}
 {}
-\boxset{Complete metric space}
-{}
 \boxset{Separable metric space}
 {}
 \boxset{Contracting sequence of subsets of a metric space}
@@ -747,8 +882,6 @@ $$
 \boxset{Totally bounded metric space}
 {}
 \boxset{Lebesgue number for an open cover}
-{}
-\boxset{Equicontinuity for a collection of real-valued functions on a metric space}
 {}
 \boxset{Nowhere dense subset of a metric space}
 {}

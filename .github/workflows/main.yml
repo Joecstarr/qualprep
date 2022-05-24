@@ -15,6 +15,7 @@ jobs:
         - name: Compile LaTeX document
           uses: xu-cheng/latex-action@v2
           with:
+            working_directory: "pastquals/latex"
             latexmk_use_lualatex: true
             root_file: "*.tex"
             glob_root_file: true
@@ -39,4 +40,4 @@ jobs:
             files: |
               *.pdf
               *.tex
-            
+
